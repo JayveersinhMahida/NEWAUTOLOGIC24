@@ -34,12 +34,12 @@ class _ListVehicleScreenState extends State<ListVehicleScreen> {
             if (snap.hasData) {
               final QuerySnapshot data = snap.data;
               return GridView.builder(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 10,
                     crossAxisSpacing: 10,
-                    childAspectRatio: 0.80,
+                    childAspectRatio: 0.70,
                   ),
                   itemCount: data.docs.length,
                   itemBuilder: (context, index) {
@@ -49,27 +49,35 @@ class _ListVehicleScreenState extends State<ListVehicleScreen> {
                               data: data.docs[index],
                             ));
                       },
-                      child: Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Hero(
-                              tag: '${data.docs[index]['ImgUrl'][0]}',
-                              child: Image.network(
-                                data.docs[index]['ImgUrl'][0].toString(),
-                                scale: 2.0,
-                                width: double.infinity,
-                                height: 180,
-                                fit: BoxFit.fill,
+                      child: Card(
+                        elevation: 10,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Hero(
+                                tag: '${data.docs[index]['ImgUrl'][0]}',
+                                child: Image.network(
+                                  data.docs[index]['ImgUrl'][1].toString(),
+                                  scale: 2.0,
+                                  width: double.infinity,
+                                  height: 180,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
-                            ),
-                            Text(
-                              data.docs[index]['Title'].toString(),
-                            ),
-                            Text(
-                              data.docs[index]['Price'].toString(),
-                            ),
-                          ],
+                              Text(
+                                'Title :-  ${data.docs[index]['Title']}',
+                              ),
+                              Text(
+                                'Price :-  ₹${data.docs[index]['Price']}',
+                              ),
+                              Text(
+                                'Year :-  ${data.docs[index]['VehicleYear']}',
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     );
