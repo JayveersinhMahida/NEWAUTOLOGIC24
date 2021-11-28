@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611385094666",
+    "project_id": "autologic24-26120",
+    "storage_bucket": "autologic24-26120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611385094666:android:b53f7c2295c10eb67125f3",
+        "android_client_info": {
+          "package_name": "com.example.autologic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611385094666-e2q15rtedmqpiegag3t04q4dign3d8vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPz6HR6J6Wxav3Q19MKtY59C6AtALzfFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611385094666-e2q15rtedmqpiegag3t04q4dign3d8vm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
