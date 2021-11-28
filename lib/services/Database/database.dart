@@ -70,4 +70,8 @@ class Database {
       "latitude": data.latitude,
     });
   }
+
+  Future getVehicleforsell() async {
+    return await vehicleSells.where("Allow", isEqualTo: true).get();
+  }
 }

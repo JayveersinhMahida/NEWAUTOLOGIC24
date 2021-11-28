@@ -2,6 +2,7 @@ import 'package:autologic/constants/constants.dart';
 import 'package:autologic/models/Vmodel.dart';
 import 'package:autologic/models/brandmodel.dart';
 import 'package:autologic/models/savedataModel.dart';
+import 'package:autologic/screen/ListVehileScreen/ListVehicleScreen.dart';
 import 'package:autologic/screen/MapScreen.dart';
 import 'package:autologic/screen/SellVehicle/SellVehicleScreen.dart';
 import 'package:autologic/services/Apiservices.dart';
@@ -157,6 +158,9 @@ class _HomeState extends State<Home> {
                 color: Colors.black,
               ),
               ListTile(
+                onTap: () {
+                  Get.to(() => ListVehicleScreen());
+                },
                 leading: Icon(
                   Icons.people,
                   color: Colors.black,

@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:autologic/models/sellvehiclemodel.dart';
 import 'package:autologic/services/Database/database.dart';
 import 'package:autologic/services/auth.dart';
